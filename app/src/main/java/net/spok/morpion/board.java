@@ -31,6 +31,10 @@ public class board {
         this.morpion[x][y] = value;
     }
 
+    public int get(int x, int y) {
+        return this.morpion[x][y];
+    }
+
 
     public void print(){
             String stringBoard[][] = {{" "," "," "},{" "," "," "},{" "," "," "}};
@@ -93,7 +97,7 @@ public class board {
     */
 
 
-    private int freeSpace() {
+    public int freeSpace() { // passed to public because i need to access it in the game thing for it to be easier to code
         int counter = 0;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {

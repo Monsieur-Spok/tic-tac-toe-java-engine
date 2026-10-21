@@ -1,4 +1,3 @@
-//
 package net.spok.morpion;
 
 
@@ -17,10 +16,12 @@ public class App {
         int[][] board = {{1, 1, 1}, 
                          {0, 0, 1}, 
                          {10, 1, 1}};
-        board test = new board(board);      //no need for the board argument
+        
+        //board test = new board(board);      //no need for the board argument
 
+        game game = new game(true, false);
 
-        test.bestMove(0);
+        game.start();
 
         
     }
