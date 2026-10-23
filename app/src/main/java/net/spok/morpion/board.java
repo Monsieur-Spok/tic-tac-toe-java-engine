@@ -242,7 +242,7 @@ public class board {
     }
     
 
-    public int[][] getLegalMoves(){         //30 min pour cette merde btw
+    private int[][] getLegalMoves(){         //30 min pour cette merde btw
         int freeSpace = this.freeSpace();
         int[][] moves = new int[freeSpace][2] ;
         int i =0 ;

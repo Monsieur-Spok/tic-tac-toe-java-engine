@@ -17,7 +17,8 @@ public class App {
                          {0, 0, 1}, 
                          {10, 1, 1}};
         
-        //board test = new board(board);      //no need for the board argument
+        board test = new board(board);      //no need for the board argument
+        test.get(3, 3);
 
         game game = new game(true, false);
 

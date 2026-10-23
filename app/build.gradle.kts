@@ -5,10 +5,13 @@
  * For more details on building Java & JVM projects, please refer to https://docs.gradle.org/9.7.0/userguide/building_java_projects.html in the Gradle documentation.
  */
 
+
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("com.gradleup.shadow") version "8.3.6"
 }
+
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -40,4 +43,12 @@ application {
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+tasks.named<Jar>("shadowJar") {
+    archiveFileName.set("morpion.jar")
+}
+
+tasks.withType<JavaExec>().configureEach {
+    standardInput = System.`in`
 }
